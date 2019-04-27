@@ -1,15 +1,29 @@
 {
   "name": "electron-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Electron Playground",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "release:this": "electron-builder",
+    "release:dir": "electron-builder --dir",
+    "release:mac": "electron-builder --mac",
+    "release:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "io.syncpoint.electron.playground",
+    "win": {
+      "target": [{
+        "target": "nsis",
+        "arch": ["x64", "ia32"]
+      }]
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^5.0.0"
+    "electron": "^5.0.0",
+    "electron-builder": "^20.39.0"
   }
 }
