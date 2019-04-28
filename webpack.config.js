@@ -1,14 +1,18 @@
 const path = require("path")
 
-module.exports = {
-  mode: "development", // production
-  context: path.join(__dirname, "renderer"),
+const rendererConfiguration = {
+
+  // https://webpack.js.org/configuration/target/
+  //   Compile for Electron for renderer process, providing a target
+  //   using JsonpTemplatePlugin, FunctionModulePlugin for browser
+  //   environments and NodeTargetPlugin and ExternalsPlugin for
+  //   CommonJS and Electron built-in modules.
+  //
+  // WTF?! This information is hardly useful.
   target: 'electron-renderer',
-  entry: ["./index.js"],
-  output: {
-    path: path.join(__dirname, "target/www"),
-    filename: "renderer.js"
-  },
+
+  // default bundle name: main.js
+  entry: './renderer/index.js',
   module: {
     rules: [
       {
@@ -19,3 +23,5 @@ module.exports = {
     ]
   }
 }
+
+module.exports = [rendererConfiguration]
