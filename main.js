@@ -10,6 +10,7 @@ const createWindow = () => {
   const options = {
     width: 800,
     height: 600,
+    show: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -17,7 +18,8 @@ const createWindow = () => {
 
   mainWindow = K(new BrowserWindow(options))(window => {
     window.loadFile('renderer/index.html')
-    on(window)(['close', () => (mainWindow = null)])
+    window.on('close', () => (mainWindow = null))
+    window.once('ready-to-show', () => window.show())
   })
 }
 
