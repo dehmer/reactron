@@ -16,12 +16,22 @@ const createWindow = () => {
     }
   }
 
+  let interval;
+
   mainWindow = K(new BrowserWindow(options))(window => {
     // NOTE: If browser complains about 'Not allowed to load local resource',
     //       the file is probable not there.
     window.loadFile('src/index.html')
-    window.on('close', () => (mainWindow = null))
+    window.on('close', () => {
+      clearInterval(interval)
+      mainWindow = null
+    })
+
     window.once('ready-to-show', () => window.show())
+    window.once('show', () => {
+      // Show that IPC does work:
+      interval = setInterval(() => window.webContents.send('time', new Date()), 1000)
+    })
   })
 }
 
