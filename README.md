@@ -15,3 +15,7 @@ Dependencies:
 * __react-dom@16.8.6__ (runtime): 1 package
 * __webpack@4.30.0__ (develop): 390 packages from 218 contributors
 * __webpack-cli@3.3.1__ (develop): 26 packages from 21 contributors
+* __@babel/core@7.4.4__ (develop): 23 packages from 46 contributors
+* __@babel/preset-env@7.4.4__ (develop): 80 packages from 14 contributors
+* __@babel/preset-react@7.0.0__ (develop): 7 packages from 1 contributor
+* __babel-loader@8.0.5__ (develop): 15 packages from 11 contributors

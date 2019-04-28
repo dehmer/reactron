@@ -11,5 +11,5 @@ win:
 files:
   - filter:
       - '**/*'
-      - renderer
+      - 'target/www'
 electronVersion: 5.0.0

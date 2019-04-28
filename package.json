@@ -8,12 +8,17 @@
     "package": "electron-builder",
     "package:dir": "electron-builder --dir",
     "package:mac": "electron-builder --mac",
-    "package:win": "electron-builder --win"
+    "package:win": "electron-builder --win",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "electron": "^5.0.0",
     "electron-builder": "^20.39.0",
     "webpack": "^4.30.0",
