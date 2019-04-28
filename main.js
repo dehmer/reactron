@@ -6,7 +6,7 @@ const K = value => fn => { fn(value); return value }
 
 let mainWindow
 
-function createWindow () {
+const createWindow = () => {
   const options = {
     width: 800,
     height: 600,
@@ -16,7 +16,7 @@ function createWindow () {
   }
 
   mainWindow = K(new BrowserWindow(options))(window => {
-    window.loadFile('index.html')
+    window.loadFile('renderer/index.html')
     on(window)(['close', () => (mainWindow = null)])
   })
 }

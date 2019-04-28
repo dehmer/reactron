@@ -1,0 +1,15 @@
+directories:
+  output: target/product
+  buildResources: build
+appId: io.syncpoint.reactron
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+files:
+  - filter:
+      - '**/*'
+      - renderer
+electronVersion: 5.0.0

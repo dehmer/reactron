@@ -1,29 +1,26 @@
 {
-  "name": "electron-boilerplate",
+  "name": "reactron",
   "version": "1.0.0",
-  "description": "Electron Playground",
+  "description": "Electron (React + Webpack)",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "release:this": "electron-builder",
-    "release:dir": "electron-builder --dir",
-    "release:mac": "electron-builder --mac",
-    "release:win": "electron-builder --win"
-  },
-  "build": {
-    "appId": "io.syncpoint.electron.playground",
-    "win": {
-      "target": [{
-        "target": "nsis",
-        "arch": ["x64", "ia32"]
-      }]
-    }
+    "package": "electron-builder",
+    "package:dir": "electron-builder --dir",
+    "package:mac": "electron-builder --mac",
+    "package:win": "electron-builder --win"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^5.0.0",
-    "electron-builder": "^20.39.0"
+    "electron-builder": "^20.39.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
