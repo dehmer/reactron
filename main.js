@@ -17,7 +17,9 @@ const createWindow = () => {
   }
 
   mainWindow = K(new BrowserWindow(options))(window => {
-    window.loadFile('renderer/index.html')
+    // NOTE: If browser complains about 'Not allowed to load local resource',
+    //       the file is probable not there.
+    window.loadFile('src/index.html')
     window.on('close', () => (mainWindow = null))
     window.once('ready-to-show', () => window.show())
   })
