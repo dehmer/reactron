@@ -1,5 +1,5 @@
 directories:
-  output: target/product
+  output: binaries
   buildResources: build
 appId: io.syncpoint.reactron
 win:

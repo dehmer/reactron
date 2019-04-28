@@ -1,4 +1,4 @@
 node_modules
-target/
+binaries/
 .DS_Store
 dist/
