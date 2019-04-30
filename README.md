@@ -7,6 +7,8 @@ So, instead of using `create-react-app`, which is really nice to start non-Elect
 Contains:
 * [Simple application](https://github.com/electron/electron-quick-start) (slightly modified)
 * Create binary releases for Windows and macOS
+* Leaflet map integration
+* Source Map creation
 
 Dependencies:
 * __electron@5.0.0__ (develop): 145 packages from 141 contributors
@@ -19,3 +21,6 @@ Dependencies:
 * __@babel/preset-env@7.4.4__ (develop): 80 packages from 14 contributors
 * __@babel/preset-react@7.0.0__ (develop): 7 packages from 1 contributor
 * __babel-loader@8.0.5__ (develop): 15 packages from 11 contributors
+* __leaflet@1.4.0__ (runtime): 1 package
+* __style-loader@0.23.1__ (develop): 1 package from 1 contributor
+* __css-loader@2.1.1__ (develop): 15 packages from 11 contributors

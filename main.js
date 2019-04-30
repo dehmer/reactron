@@ -19,8 +19,11 @@ const createWindow = () => {
   let interval;
 
   mainWindow = K(new BrowserWindow(options))(window => {
+
     // NOTE: If browser complains about 'Not allowed to load local resource',
     //       the file is probable not there.
+
+    // window.webContents.openDevTools()
     window.loadFile('src/index.html')
     window.on('close', () => {
       clearInterval(interval)
