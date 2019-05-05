@@ -4,7 +4,12 @@
 //   However, it will assume the entry point of your project is src/index[.js]
 //   and will output the result in dist/main.js minified and optimized for production.
 //
-const rendererConfiguration = {
+const renderer = {
+
+  entry: {
+    // Creates a bundle named `renderer.js`:
+    renderer: './src/index.js'
+  },
 
   // https://webpack.js.org/configuration/target/
   //   Compile for Electron for renderer process, providing a target
@@ -35,4 +40,4 @@ const rendererConfiguration = {
   }
 }
 
-module.exports = [rendererConfiguration]
+module.exports = [renderer]
