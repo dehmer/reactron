@@ -9,7 +9,7 @@ win:
         - x64
         - ia32
 files:
-  - filter:
-      - '**/*'
-      - 'dist'
+  - 'main.js' # main process entry point (referenced in package.json)
+  - 'src/index.html' # (primary) renderer entry point (referenced in main.js)
+  - 'dist' # webpack bundles; contains main.js (referenced by src/index.html)
 electronVersion: 5.0.0

@@ -23,7 +23,10 @@ const createWindow = () => {
     // NOTE: If browser complains about 'Not allowed to load local resource',
     //       the file is probable not there.
 
-    // window.webContents.openDevTools()
+    console.log('__dirname', __dirname)
+    console.log('app.getAppPath()', app.getAppPath())
+
+    // Note: Once packaged current working directory is ASARs root directory.
     window.loadFile('src/index.html')
     window.on('close', () => {
       clearInterval(interval)

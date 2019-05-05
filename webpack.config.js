@@ -24,8 +24,12 @@ const rendererConfiguration = {
         use: ["babel-loader"]
       },
       {
+        // css-loader: resolve/load required/imported CSS dependencies from JavaScript
+        // style-loader: wrap CSS string from css-loader with <style> tag
+        // Note: loaders are applied from right to left, i.e. css-loader -> style-loader
+        //
         test: /\.css$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
+        use: ['style-loader', 'css-loader' ]
       }
     ]
   }
