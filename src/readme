@@ -1,2 +1,0 @@
-src/ is the default location where webpack is looking for modules.
-index.js is the default module which is processed by webpack without further configuration.

@@ -7,7 +7,7 @@ const path = require('path')
 //
 const renderer = {
   // TODO: rename directory `src` to `renderer`
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, 'renderer'),
   entry: {
     // Creates a bundle named `renderer.js`:
     renderer: './index.js',
