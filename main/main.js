@@ -1,8 +1,7 @@
-const {app, BrowserWindow} = require('electron')
+import { app, BrowserWindow } from 'electron'
+import { K, noop } from './combinators'
 
-const noop = () => {}
 const on = emitter => ([event, handler]) => emitter.on(event, handler)
-const K = value => fn => { fn(value); return value }
 
 let mainWindow
 
@@ -22,9 +21,6 @@ const createWindow = () => {
 
     // NOTE: If browser complains about 'Not allowed to load local resource',
     //       the file is probable not there.
-
-    console.log('__dirname', __dirname) // directory of main.js, i.e. directory name of the current module
-    console.log('app.getAppPath()', app.getAppPath()) // app.asar/
 
     // Note: Once packaged current working directory is ASARs root directory.
     window.loadFile('src/index.html')

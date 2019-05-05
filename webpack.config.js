@@ -40,4 +40,25 @@ const renderer = {
   }
 }
 
-module.exports = [renderer]
+const main = {
+  entry: {
+    // Creates a bundle named `main.js`:
+    main: './main/main.js'
+  },
+
+  /**
+   * https://webpack.js.org/configuration/target:
+   *
+   *   For example, when the target is set to "electron-main",
+   *   webpack includes multiple electron specific variables.
+   *   For more information on which templates and externals are used,
+   *   you can refer to webpack's __source code__.
+   *
+   * Source Code?! Yeah! Funny!
+   */
+  target: 'electron-main'
+
+  // NOTE: No `module` entry required. (hmm)
+}
+
+module.exports = [renderer, main]
