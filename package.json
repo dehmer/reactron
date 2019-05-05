@@ -2,7 +2,7 @@
   "name": "reactron",
   "version": "1.0.0",
   "description": "Electron (React + Webpack)",
-  "main": "main.js",
+  "main": "main/main.js",
   "scripts": {
     "start": "electron .",
     "package": "electron-builder",
