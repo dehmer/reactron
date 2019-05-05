@@ -22,8 +22,9 @@ const createWindow = () => {
     // NOTE: If browser complains about 'Not allowed to load local resource',
     //       the file is probable not there.
 
-    // Note: Once packaged current working directory is ASARs root directory.
-    window.loadFile('src/index.html')
+    // TODO: use `app.isPackaged` to enable HMR.
+
+    window.loadFile('dist/index.html')
     window.on('close', () => {
       clearInterval(interval)
       mainWindow = null

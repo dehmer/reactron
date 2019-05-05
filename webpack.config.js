@@ -1,3 +1,4 @@
+const path = require('path')
 
 // https://webpack.js.org/configuration/
 //   Out of the box, webpack won't require you to use a configuration file.
@@ -5,10 +6,12 @@
 //   and will output the result in dist/main.js minified and optimized for production.
 //
 const renderer = {
-
+  // TODO: rename directory `src` to `renderer`
+  context: path.resolve(__dirname, 'src'),
   entry: {
     // Creates a bundle named `renderer.js`:
-    renderer: './src/index.js'
+    renderer: './index.js',
+    html: './index.html'
   },
 
   // https://webpack.js.org/configuration/target/
@@ -35,15 +38,20 @@ const renderer = {
         //
         test: /\.css$/,
         use: ['style-loader', 'css-loader' ]
+      },
+      {
+        test: /\.html$/,
+        loader: "file-loader?name=[name].[ext]",
       }
     ]
   }
 }
 
 const main = {
+  context: path.resolve(__dirname, 'main'),
   entry: {
     // Creates a bundle named `main.js`:
-    main: './main/main.js'
+    main: './main.js'
   },
 
   /**
